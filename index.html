@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,30 +67,59 @@
 </nav>
 
 <main>
-    <section id="history">
-        <h2>History of Basketball</h2>
-        <p>Basketball was invented in 1891 by Dr. James Naismith. It has grown to become one of the most popular sports in the world, with professional leagues like the NBA captivating millions of fans.</p>
+    <section id="rules">
+        <h2>5 Most Important Rules</h2>
+        <ul>
+            <li><strong>Team Composition:</strong> Each team must have five players on the court. Substitutions can be made during stoppages in play.</li>
+            <li><strong>Game Duration:</strong> Professional games are played in four quarters of 12 minutes each, while college games have two halves of 20 minutes each.</li>
+            <li><strong>Scoring Points:</strong> A basket made from inside the three-point arc earns 2 points, while a successful shot from beyond the arc scores 3 points. Free throws are worth 1 point each.</li>
+            <li><strong>Ball Handling:</strong> Players must dribble the ball while moving. Picking up the ball and moving without dribbling is considered "traveling" and results in a turnover.</li>
+            <li><strong>Fouls and Penalties:</strong> Personal fouls occur when illegal physical contact is made. Accumulating too many fouls can lead to free throws for the opposing team or even disqualification of a player.</li>
+        </ul>
+        <p><strong>Did You Know?</strong> The NBA introduced the shot clock in 1954 to prevent teams from stalling. The clock requires teams to take a shot within 24 seconds, adding excitement and pace to the game.</p>
     </section>
+    
+    
 
     <section id="rules">
-        <h2>Basic Rules</h2>
+        <h2>5 Most Important Rules</h2>
         <ul>
-            <li>Each team has five players on the court.</li>
-            <li>The objective is to score points by shooting the ball through the opponent's hoop.</li>
-            <li>Games are divided into quarters, and the team with the most points at the end wins.</li>
+            <li>Each team must have five players on the court at all times.</li>
+            <li>The game is played in four quarters of a specified time.</li>
+            <li>Points are scored by shooting the ball through the opponent's hoop.</li>
+            <li>The ball must be dribbled while moving; traveling is not allowed.</li>
+            <li>Personal fouls result in free throws or loss of possession.</li>
         </ul>
     </section>
 
     <section id="famous-players">
-        <h2>Famous Players</h2>
-        <p>Some legendary basketball players include Michael Jordan, LeBron James, Kobe Bryant, and Shaquille O'Neal.</p>
+        <h2>10 Best Players in Basketball History</h2>
+        <ol>
+            <li>Michael Jordan</li>
+            <li>LeBron James</li>
+            <li>Kobe Bryant</li>
+            <li>Magic Johnson</li>
+            <li>Larry Bird</li>
+            <li>Wilt Chamberlain</li>
+            <li>Bill Russell</li>
+            <li>Shaquille O'Neal</li>
+            <li>Tim Duncan</li>
+            <li>Kareem Abdul-Jabbar</li>
+        </ol>
     </section>
 
     <section id="gallery">
         <h2>Gallery</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Basketball court">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Basketball court">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Basketball_dunk.jpg" alt="Player dunking the ball">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Crowd_in_basketball_game.jpg" alt="Crowd cheering at a basketball game">
+        </div>
         <p>Explore stunning basketball moments captured in photos.</p>
     </section>
+    
+    </section>
+    
 </main>
 
 <footer>
@@ -99,3 +128,25 @@
 
 </body>
 </html>
+<script>
+    document.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        let currentSection = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 50; // Adjust for offset if needed
+            if (pageYOffset >= sectionTop) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(currentSection)) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
