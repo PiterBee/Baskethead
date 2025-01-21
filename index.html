@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +36,11 @@
             padding: 20px;
         }
         section {
+            display: none; /* Hide all sections by default */
             margin-bottom: 20px;
+        }
+        section.active {
+            display: block; /* Show only active section */
         }
         footer {
             background-color: #333;
@@ -60,13 +64,18 @@
 </header>
 
 <nav>
-    <a href="#history">History</a>
-    <a href="#rules">Rules</a>
-    <a href="#famous-players">Famous Players</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#" onclick="showSection('history')">History</a>
+    <a href="#" onclick="showSection('rules')">Rules</a>
+    <a href="#" onclick="showSection('famous-players')">Famous Players</a>
+    <a href="#" onclick="showSection('gallery')">Gallery</a>
 </nav>
 
 <main>
+    <section id="history" class="active">
+        <h2>History of Basketball</h2>
+        <p>Basketball was invented in 1891 by Dr. James Naismith. It has grown to become one of the most popular sports in the world, with professional leagues like the NBA captivating millions of fans.</p>
+    </section>
+
     <section id="rules">
         <h2>5 Most Important Rules</h2>
         <ul>
@@ -75,20 +84,6 @@
             <li><strong>Scoring Points:</strong> A basket made from inside the three-point arc earns 2 points, while a successful shot from beyond the arc scores 3 points. Free throws are worth 1 point each.</li>
             <li><strong>Ball Handling:</strong> Players must dribble the ball while moving. Picking up the ball and moving without dribbling is considered "traveling" and results in a turnover.</li>
             <li><strong>Fouls and Penalties:</strong> Personal fouls occur when illegal physical contact is made. Accumulating too many fouls can lead to free throws for the opposing team or even disqualification of a player.</li>
-        </ul>
-        <p><strong>Did You Know?</strong> The NBA introduced the shot clock in 1954 to prevent teams from stalling. The clock requires teams to take a shot within 24 seconds, adding excitement and pace to the game.</p>
-    </section>
-    
-    
-
-    <section id="rules">
-        <h2>5 Most Important Rules</h2>
-        <ul>
-            <li>Each team must have five players on the court at all times.</li>
-            <li>The game is played in four quarters of a specified time.</li>
-            <li>Points are scored by shooting the ball through the opponent's hoop.</li>
-            <li>The ball must be dribbled while moving; traveling is not allowed.</li>
-            <li>Personal fouls result in free throws or loss of possession.</li>
         </ul>
     </section>
 
@@ -117,36 +112,30 @@
         </div>
         <p>Explore stunning basketball moments captured in photos.</p>
     </section>
-    
-    </section>
-    
 </main>
 
 <footer>
     <p>&copy; 2025 Basketball Enthusiasts. All rights reserved.</p>
 </footer>
 
-</body>
-</html>
 <script>
-    document.addEventListener('scroll', function () {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
-        let currentSection = '';
-
+    function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('main section');
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 50; // Adjust for offset if needed
-            if (pageYOffset >= sectionTop) {
-                currentSection = section.getAttribute('id');
-            }
+            section.classList.remove('active');
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(currentSection)) {
-                link.classList.add('active');
-            }
-        });
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.classList.add('active');
+    }
+
+    // Optional: Show the first section (e.g., 'History') by default
+    document.addEventListener('DOMContentLoaded', () => {
+        showSection('history');
     });
 </script>
+
+</body>
+</html>
