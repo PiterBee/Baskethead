@@ -55,6 +55,10 @@
             max-width: 100%;
             height: auto;
         }
+        .welcome-section img {
+            width: 150px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +68,7 @@
 </header>
 
 <nav>
+    <a href="#" onclick="showSection('welcome')">Home</a>
     <a href="#" onclick="showSection('history')">History</a>
     <a href="#" onclick="showSection('rules')">Rules</a>
     <a href="#" onclick="showSection('famous-players')">Famous Players</a>
@@ -71,11 +76,20 @@
 </nav>
 
 <main>
-    <section id="history" class="active">
+    <!-- Welcome Section -->
+    <section id="welcome" class="active welcome-section">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Basketball logo">
+        <h2>Welcome to our site!</h2>
+        <p>Explore the exciting world of basketball with us. Click on the menu above to learn more!</p>
+    </section>
+
+    <!-- History Section -->
+    <section id="history">
         <h2>History of Basketball</h2>
         <p>Basketball was invented in 1891 by Dr. James Naismith. It has grown to become one of the most popular sports in the world, with professional leagues like the NBA captivating millions of fans.</p>
     </section>
 
+    <!-- Rules Section -->
     <section id="rules">
         <h2>5 Most Important Rules</h2>
         <ul>
@@ -87,6 +101,7 @@
         </ul>
     </section>
 
+    <!-- Famous Players Section -->
     <section id="famous-players">
         <h2>10 Best Players in Basketball History</h2>
         <ol>
@@ -103,6 +118,7 @@
         </ol>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery">
         <h2>Gallery</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
@@ -131,9 +147,9 @@
         selectedSection.classList.add('active');
     }
 
-    // Optional: Show the first section (e.g., 'History') by default
+    // Optional: Show the welcome section by default
     document.addEventListener('DOMContentLoaded', () => {
-        showSection('history');
+        showSection('welcome');
     });
 </script>
 
