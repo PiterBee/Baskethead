@@ -21,7 +21,7 @@
             font-weight: bold;
         }
         h1 {
-            color: #fbc02d; /* Light yellow for the heading */
+            color: #3fb7fc; /* Light yellow for the heading */
         }
         nav {
             text-align: center;
@@ -93,7 +93,8 @@
     <!-- Welcome Section -->
     <section id="welcome" class="active welcome-section">
         <!-- Updated NBA Logo URL (better image) -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/NBA_logo.png" alt="NBA Logo">
+        <img src="assets/images/NBA.jpg" alt="NBA Logo"style="width: 200px; height: auto;">
+
         <h2>Welcome Basketball Enthusiasts!</h2>
         <p>Are you ready to immerse yourself in the world of basketball? Whether you're here to learn about the history of the game, discover the rules, or check out the greatest players, you've come to the right place! Explore, learn, and enjoy everything basketball has to offer. Click on the menu above to get started!</p>
     </section>
@@ -155,7 +156,7 @@
         <div style="background-color: #2e3b4e; padding: 20px; border-radius: 8px; margin-top: 30px;">
             <h3 style="font-size: 2rem; color: #ff5722;">Ball Handling</h3>
             <p style="font-size: 1.2rem; line-height: 1.6; margin-bottom: 20px;">Players must dribble the ball while moving. If they stop dribbling, they must either pass or shoot. If they take too many steps without dribbling, it's considered a travel violation.</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Basketball_dribbling.jpg/800px-Basketball_dribbling.jpg" alt="Dribbling the ball" style="width: 100%; height: auto; border-radius: 8px;">
+       
         </div>
     
         <!-- Important Violations Section -->
@@ -179,18 +180,59 @@
                 <li><strong>Power Forward:</strong> Plays close to the basket and is often a key rebounder.</li>
                 <li><strong>Center:</strong> The tallest player, usually positioned near the basket for both offensive and defensive plays.</li>
             </ul>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Basketball_Court.jpg/1280px-Basketball_Court.jpg" alt="Basketball Court" style="width: 100%; height: auto; border-radius: 8px; margin-top: 20px;">
         </div>
     
         <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 30px;">These are just some of the essential rules that govern the game of basketball. Understanding these rules will help you appreciate the intricacies and strategy of this fast-paced sport.</p>
     </section>
     
+    <!-- Rules Section -->
+    <section id="rules" style="background-color: #1e2a38; color: #f1f1f1; padding: 40px; border-radius: 8px; margin-top: 40px;">
+        <h2 style="font-size: 2.5rem; color: #ff5722;">Important Rules</h2>
+        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <a href="#rule1" style="text-decoration: none; color: inherit;">
+                <div style="text-align: center;">
+                    <img src="assets/icons/rule1.png" alt="Rule 1" style="width: 100px; height: auto;">
+                    <p style="font-size: 1.2rem;">Rule 1</p>
+                </div>
+            </a>
+            <a href="#rule2" style="text-decoration: none; color: inherit;">
+                <div style="text-align: center;">
+                    <img src="assets/icons/rule2.png" alt="Rule 2" style="width: 100px; height: auto;">
+                    <p style="font-size: 1.2rem;">Rule 2</p>
+                </div>
+            </a>
+            <a href="#rule3" style="text-decoration: none; color: inherit;">
+                <div style="text-align: center;">
+                    <img src="assets/icons/rule3.png" alt="Rule 3" style="width: 100px; height: auto;">
+                    <p style="font-size: 1.2rem;">Rule 3</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Rule 1 Section -->
+    <section id="rule1" style="background-color: #1e2a38; color: #f1f1f1; padding: 40px; border-radius: 8px; margin-top: 40px;">
+        <h2 style="font-size: 2.5rem; color: #ff5722;">Rule 1</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 20px;">Description of Rule 1...</p>
+    </section>
+
+    <!-- Rule 2 Section -->
+    <section id="rule2" style="background-color: #1e2a38; color: #f1f1f1; padding: 40px; border-radius: 8px; margin-top: 40px;">
+        <h2 style="font-size: 2.5rem; color: #ff5722;">Rule 2</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 20px;">Description of Rule 2...</p>
+    </section>
+
+    <!-- Rule 3 Section -->
+    <section id="rule3" style="background-color: #1e2a38; color: #f1f1f1; padding: 40px; border-radius: 8px; margin-top: 40px;">
+        <h2 style="font-size: 2.5rem; color: #ff5722;">Rule 3</h2>
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 20px;">Description of Rule 3...</p>
+    </section>
 
     <section id="famous-players" style="background-color: #1e2a38; color: #f1f1f1; padding: 40px; border-radius: 8px;">
         <h2 style="font-size: 2.5rem; color: #ff5722;">Famous Basketball Players</h2>
-    
+     
         <!-- Michael Jordan -->
-        <div style="background-color: #2e3b4e; padding: 20px; border-radius: 8px; margin-top: 30px;">
+        <div id="Michael_Jordan" style="background-color: #2e3b4e; padding: 20px; border-radius: 8px; margin-top: 30px;">
             <h3 style="font-size: 2rem; color: #ff5722;">Michael Jordan</h3>
             <p style="font-size: 1.2rem; line-height: 1.6;">Michael Jordan is often regarded as the greatest basketball player of all time. Known for his scoring ability, incredible work ethic, and six NBA championships, Jordan's impact on the sport transcends the court. His career with the Chicago Bulls and later the Washington Wizards left an indelible mark on the game.</p>
             
@@ -203,13 +245,15 @@
                     <p style="font-size: 1.2rem;">Steals: 2.3 SPG</p>
                 </div>
                 <div style="width: 48%;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Michael_Jordan_in_1997.jpg/1024px-Michael_Jordan_in_1997.jpg" alt="Michael Jordan" style="width: 100%; height: auto; border-radius: 8px;">
+                    <img src="./assets/images/MJ.png" alt="Michael Jordan" style="width: 100%; border-radius: 8px;">
+
                 </div>
             </div>
+            <a href="#LeBron">Scroll to Next Section</a>
         </div>
     
         <!-- LeBron James -->
-        <div style="background-color: #2e3b4e; padding: 20px; border-radius: 8px; margin-top: 30px;">
+        <div id="LeBron" style="background-color: #2e3b4e; padding: 20px; border-radius: 8px; margin-top: 30px;">
             <h3 style="font-size: 2rem; color: #ff5722;">LeBron James</h3>
             <p style="font-size: 1.2rem; line-height: 1.6;">LeBron James is one of the most versatile players in NBA history. Known for his athleticism, basketball IQ, and leadership, LeBron has won four NBA championships and is regarded as one of the best all-around players in the game's history. His impact extends beyond the court, with major philanthropic and business ventures.</p>
             
@@ -222,7 +266,7 @@
                     <p style="font-size: 1.2rem;">Steals: 1.6 SPG</p>
                 </div>
                 <div style="width: 48%;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/LeBron_James_2020.jpg" alt="LeBron James" style="width: 100%; height: auto; border-radius: 8px;">
+                    <img src="./assets/images/LBJ.png" alt="LeBron James" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </div>
@@ -241,7 +285,7 @@
                     <p style="font-size: 1.2rem;">Steals: 1.7 SPG</p>
                 </div>
                 <div style="width: 48%;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Stephen_Curry_2019.jpg" alt="Stephen Curry" style="width: 100%; height: auto; border-radius: 8px;">
+                    <img src="/assets/images/STEPH.jpg" alt="Stephen Curry" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </div>
@@ -260,7 +304,7 @@
                     <p style="font-size: 1.2rem;">Steals: 2.2 SPG</p>
                 </div>
                 <div style="width: 48%;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Allen_Iverson_2010.jpg" alt="Allen Iverson" style="width: 100%; height: auto; border-radius: 8px;">
+                    <img src="/assets/images/iverson1.webp" alt="Allen Iverson" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </div>
@@ -279,7 +323,7 @@
                     <p style="font-size: 1.2rem;">Steals: 1.4 SPG</p>
                 </div>
                 <div style="width: 48%;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Kobe_Bryant_2014.jpg" alt="Kobe Bryant" style="width: 100%; height: auto; border-radius: 8px;">
+                    <img src="/assets/images/Kobe_Bryant_2014.jpg" alt="Kobe Bryant" style="width: 100%; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </div>
@@ -287,16 +331,39 @@
     </section>
     
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Basketball court">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Basketball_dunk.jpg" alt="Player dunking the ball">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Crowd_in_basketball_game.jpg" alt="Crowd cheering at a basketball game">
+    <section id="gallery" style="background-color: #1e2a38; color: #f1f1f1; padding: 40px; border-radius: 8px;">
+        <h2 style="font-size: 2.5rem; color: #ff5722;">Basketball Gallery</h2>
+        
+        <p style="font-size: 1.2rem; line-height: 1.6; margin-top: 20px;">Here are some iconic and amazing photos that capture the essence of basketball. From electrifying dunks to intense game moments, these images showcase the passion and excitement of the sport.</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+            <!-- Image 1: Dunk -->
+            <div style="background-color: #2e3b4e; border-radius: 8px; overflow: hidden;">
+                <img src="/assets/images/LBD.jpg" alt="Lebron and Dwade" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            
+            <!-- Image 2: Game moment -->
+            <div style="background-color: #2e3b4e; border-radius: 8px; overflow: hidden;">
+                <img src="/assets/images/MJ last.avif" alt="The Last Shot" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            
+            <!-- Image 3:  -->
+            <div style="background-color: #2e3b4e; border-radius: 8px; overflow: hidden;">
+                <img src="/assets/images/WIL.jpg" alt="Michael Jordan shot" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            
+            <!-- Image 4: LeBron James dunk -->
+            <div style="background-color: #2e3b4e; border-radius: 8px; overflow: hidden;">
+                <img src="/assets/images/ai.jpg" alt="LeBron James dunk" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            
+            <!-- Image 5: NBA Finals moment -->
+            <div style="background-color: #2e3b4e; border-radius: 8px; overflow: hidden;">
+                <img src="/assets/images/Larry.jpg" alt="NBA Finals crowd" style="width: 100%; height: auto; border-radius: 8px;">
+            </div>
         </div>
-        <p>Explore stunning basketball moments captured in photos.</p>
     </section>
+    
 </main>
 
 <footer>
